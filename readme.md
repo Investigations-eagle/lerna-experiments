@@ -1,11 +1,12 @@
 # Lerna experiment
 
-## TODO: Find answers to questions:
+## TODO: Find answers to next questions:
 
-* lazy loaded module with sub routes (for ex. login module) @dosandk
-* shred libs bundle (moment + highcharts, etc.) @skrechko
-* shared ui controls libs (without lazy loading) @skrechko
-* create server for mapping projects to subdomains
+* how to lazy load module with sub routes (for ex. login module) @dosandk
+* how to crate shared libs bundle (moment + highcharts, etc.) @skrechko
+* how to make shared ui-controls libs (without lazy loading) @skrechko
+* how to create server for mapping projects to subdomains
+* analyze pros/cons of the lerna approach (compare with nrwl/nx)
 
 ## To start project:
 * `npm install --global lerna`
