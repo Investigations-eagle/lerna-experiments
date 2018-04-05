@@ -14,7 +14,7 @@
 * `lerna run packagr`
 * `lerna bootstrap`
 
-## To serve project:
+## To serve app:
 * `lerna run start --scope <app-name>`
 
 ## Build all apps:
