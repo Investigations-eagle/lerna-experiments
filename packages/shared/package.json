@@ -3,14 +3,24 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "packagr": "ng-packagr"
+  },
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
+    "@angular/cli": "1.6.7",
+    "@angular/compiler-cli": "^5.2.0",
+    "@angular/compiler": "^5.2.0",
+    "@types/highcharts": "^5.0.21",
+    "ng-packagr": "^2.4.1",
+    "@angular/core": "^5.2.0",
+    "@angular/common": "^5.2.0"
+  },
+  "peerDependencies": {
+    "@angular/core": "^5.2.0",
+    "@angular/common": "^5.2.0",
     "angular-highcharts": "^5.2.10",
     "highcharts": "^6.0.7"
-  },
-  "devDependencies": {
-    "@types/highcharts": "^5.0.21"
   }
 }
