@@ -1,0 +1,16 @@
+{
+  "name": "shared",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular-highcharts": "^5.2.10",
+    "highcharts": "^6.0.7"
+  },
+  "devDependencies": {
+    "@types/highcharts": "^5.0.21"
+  }
+}

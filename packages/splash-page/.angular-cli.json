@@ -6,10 +6,15 @@
   "apps": [
     {
       "root": "src",
-      "outDir": "dist",
+      "outDir": "../../dist/splash-page",
       "assets": [
         "assets",
-        "favicon.ico"
+        "favicon.ico",
+        {
+          "input": "./app/login/assets",
+          "output": "./assets/",
+          "glob": "**/*"
+        }
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -19,7 +24,8 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "assets/styles/main.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
