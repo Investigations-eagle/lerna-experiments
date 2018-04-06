@@ -1,0 +1,11 @@
+{
+  "name": "@eagle/ui-kit",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "peerDepenencies": {
+    "@angular/common": "^5.2.0",
+    "@angular/core": "^5.2.0",
+    "primeng": "^5.2.4"
+  }
+}

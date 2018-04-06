@@ -1,0 +1,19 @@
+{
+  "name": "@eagle/ui-kit",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "peerDepenencies": {
+    "@angular/common": "^5.2.0",
+    "@angular/core": "^5.2.0",
+    "primeng": "^5.2.4"
+  },
+  "main": "bundles/eagle-ui-kit.umd.js",
+  "module": "esm5/eagle-ui-kit.js",
+  "es2015": "esm2015/eagle-ui-kit.js",
+  "typings": "eagle-ui-kit.d.ts",
+  "metadata": "eagle-ui-kit.metadata.json",
+  "dependencies": {
+    "tslib": "^1.7.1"
+  }
+}
