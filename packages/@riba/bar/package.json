@@ -1,8 +1,8 @@
 {
-  "name": "riba",
-  "version": "2.0.1",
+  "name": "@riba/bar",
+  "version": "2.0.2",
   "description": "",
-  "main": "riba.js",
+  "main": "./dist/bar.js",
   "scripts": {},
   "author": "",
   "private": true,
