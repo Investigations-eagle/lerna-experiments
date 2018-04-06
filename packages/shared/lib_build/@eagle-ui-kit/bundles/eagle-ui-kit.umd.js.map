@@ -7,7 +7,7 @@
   ],
   "sourcesContent": [
     "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { EagleControlComponent } from './eagle-control.component';\nimport { ButtonModule } from 'primeng/button';\n\n@NgModule({\n  imports: [\n    CommonModule,\n    ButtonModule\n  ],\n  declarations: [EagleControlComponent],\n  exports: [EagleControlComponent, ButtonModule],\n  entryComponents: [EagleControlComponent]\n})\nexport class EagleControlModule {}\n",
-    "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-eagle-control',\n  template: `<p class=\"button-container\">\n  <span>Button tittle</span><br>\n  <p-button label=\"Click\" styleClass=\"eg-button\"></p-button>\n</p>\n`,\n  styles: [`.eg-button{border:4px solid green}`]\n})\nexport class EagleControlComponent {}\n"
+    "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-eagle-control',\n  template: `<p class=\"button-container\">\n  <span>Shred UI Button tittle </span><br>\n  <p-button label=\"Click\" styleClass=\"eg-button\"></p-button>\n</p>\n`,\n  styles: [`.eg-button{border:4px solid green}`]\n})\nexport class EagleControlComponent {}\n"
   ],
   "names": [
     "ButtonModule",
@@ -15,5 +15,5 @@
     "NgModule",
     "Component"
   ],
-  "mappings": ";;;;;;ACAA,IAAA,qBAAA,kBAAA,YAAA;IAAA,SAAA,qBAAA,GAAA;;;;;IAEA,EAAA,IAAA,EAACG,cAAS,EAAV,IAAA,EAAA,CAAW;gBACT,QAAQ,EAAE,mBAAmB;gBAC7B,QAAQ,EAAE,4IAIX;gBACC,MAAM,EAAE,CAAC,oCAAoC,CAAC;aAC/C,EAAD,EAAA;;ADVA,IAAA,kBAAA,kBAAA,YAAA;IAAA,SAAA,kBAAA,GAAA;;;;;IAKA,EAAA,IAAA,EAACD,aAAQ,EAAT,IAAA,EAAA,CAAU;gBACR,OAAO,EAAE;oBACPD,mBAAY;oBACZD,mBAAY;iBACb;gBACD,YAAY,EAAE,CAAC,qBAAqB,CAAC;gBACrC,OAAO,EAAE,CAAC,qBAAqB,EAAEA,mBAAY,CAAC;gBAC9C,eAAe,EAAE,CAAC,qBAAqB,CAAC;aACzC,EAAD,EAAA;;;;;;;;;;;;;;"
+  "mappings": ";;;;;;ACAA,IAAA,qBAAA,kBAAA,YAAA;IAAA,SAAA,qBAAA,GAAA;;;;;IAEA,EAAA,IAAA,EAACG,cAAS,EAAV,IAAA,EAAA,CAAW;gBACT,QAAQ,EAAE,mBAAmB;gBAC7B,QAAQ,EAAE,sJAIX;gBACC,MAAM,EAAE,CAAC,oCAAoC,CAAC;aAC/C,EAAD,EAAA;;ADVA,IAAA,kBAAA,kBAAA,YAAA;IAAA,SAAA,kBAAA,GAAA;;;;;IAKA,EAAA,IAAA,EAACD,aAAQ,EAAT,IAAA,EAAA,CAAU;gBACR,OAAO,EAAE;oBACPD,mBAAY;oBACZD,mBAAY;iBACb;gBACD,YAAY,EAAE,CAAC,qBAAqB,CAAC;gBACrC,OAAO,EAAE,CAAC,qBAAqB,EAAEA,mBAAY,CAAC;gBAC9C,eAAe,EAAE,CAAC,qBAAqB,CAAC;aACzC,EAAD,EAAA;;;;;;;;;;;;;;"
 }

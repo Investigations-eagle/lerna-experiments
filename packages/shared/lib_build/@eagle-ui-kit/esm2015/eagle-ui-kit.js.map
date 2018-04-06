@@ -7,7 +7,7 @@
   ],
   "sourcesContent": [
     "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { EagleControlComponent } from './eagle-control.component';\nimport { ButtonModule } from 'primeng/button';\n\n@NgModule({\n  imports: [\n    CommonModule,\n    ButtonModule\n  ],\n  declarations: [EagleControlComponent],\n  exports: [EagleControlComponent, ButtonModule],\n  entryComponents: [EagleControlComponent]\n})\nexport class EagleControlModule {}\n",
-    "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-eagle-control',\n  template: `<p class=\"button-container\">\n  <span>Button tittle</span><br>\n  <p-button label=\"Click\" styleClass=\"eg-button\"></p-button>\n</p>\n`,\n  styles: [`.eg-button{border:4px solid green}`]\n})\nexport class EagleControlComponent {}\n"
+    "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-eagle-control',\n  template: `<p class=\"button-container\">\n  <span>Shred UI Button tittle </span><br>\n  <p-button label=\"Click\" styleClass=\"eg-button\"></p-button>\n</p>\n`,\n  styles: [`.eg-button{border:4px solid green}`]\n})\nexport class EagleControlComponent {}\n"
   ],
   "names": [],
   "mappings": ";;;;;;;;ACAA,AAWA,MAAA,qBAAA,CAAA;;;IATA,EAAA,IAAA,EAAC,SAAS,EAAV,IAAA,EAAA,CAAW;gBACT,QAAQ,EAAE,mBAAmB;gBAC7B,QAAQ,EAAE,CAAZ;;;;AAIA,CAAC;gBACC,MAAM,EAAE,CAAC,CAAX,kCAAA,CAA+C,CAAC;aAC/C,EAAD,EAAA;;;;;;;ADVA,AAcA,MAAA,kBAAA,CAAA;;;IATA,EAAA,IAAA,EAAC,QAAQ,EAAT,IAAA,EAAA,CAAU;gBACR,OAAO,EAAE;oBACP,YAAY;oBACZ,YAAY;iBACb;gBACD,YAAY,EAAE,CAAC,qBAAqB,CAAC;gBACrC,OAAO,EAAE,CAAC,qBAAqB,EAAE,YAAY,CAAC;gBAC9C,eAAe,EAAE,CAAC,qBAAqB,CAAC;aACzC,EAAD,EAAA;;;;;;;;;;;;;;;;;;"

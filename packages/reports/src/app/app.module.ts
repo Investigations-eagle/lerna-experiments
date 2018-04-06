@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-// Shared lib
+// Shared lib after install
 import { EagleControlModule } from '@eagle/ui-kit';
 // import { EagleControlModule } from '../../../shared/lib_build/@eagle-ui-kit';
 

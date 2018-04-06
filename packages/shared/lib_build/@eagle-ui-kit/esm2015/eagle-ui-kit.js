@@ -12,7 +12,7 @@ EagleControlComponent.decorators = [
     { type: Component, args: [{
                 selector: 'app-eagle-control',
                 template: `<p class="button-container">
-  <span>Button tittle</span><br>
+  <span>Shred UI Button tittle </span><br>
   <p-button label="Click" styleClass="eg-button"></p-button>
 </p>
 `,
