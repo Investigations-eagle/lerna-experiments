@@ -6,6 +6,7 @@
   "peerDepenencies": {
     "@angular/common": "^5.2.0",
     "@angular/core": "^5.2.0",
+    "@angular/router": "^5.2.0",
     "primeng": "^5.2.4"
   }
 }

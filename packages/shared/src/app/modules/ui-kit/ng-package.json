@@ -1,6 +1,6 @@
 {
   "$schema": "../../../../node_modules/ng-packagr/ng-package.schema.json",
-  "src": "../modules",
+  "src": "../modules/ui-kit",
   "dest": "../../../../lib_build/@eagle-ui-kit",
   "workingDirectory": "../../../../.ng_build",
   "lib": {

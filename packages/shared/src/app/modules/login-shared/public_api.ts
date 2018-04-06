@@ -1,1 +1,0 @@
-export { LoginSharedModule } from './index';

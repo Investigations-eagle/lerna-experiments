@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "packagr": "npm run clean-lib-build build && ng-packagr -p src/app/modules/package.json",
+    "packagr": "npm run clean-lib-build build && ng-packagr -p src/app/modules/ui-kit/package.json",
     "clean-lib-build": "rimraf lib_build/*"
   },
   "private": true,

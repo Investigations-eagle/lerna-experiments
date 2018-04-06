@@ -6,14 +6,18 @@ import { AppComponent } from './app.component';
 
 // Shared lib after install
 import { EagleControlModule } from '@eagle/ui-kit';
+import { BaseComponent } from "./components/base";
+import { AppRouterModule } from "./app.routes";
 // import { EagleControlModule } from '../../../shared/lib_build/@eagle-ui-kit';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BaseComponent
   ],
   imports: [
     BrowserModule,
+    AppRouterModule,
     EagleControlModule
   ],
   providers: [],

@@ -8,9 +8,8 @@ const routes: Routes = [{
   children: [
     {
       path: '',
-      component: LoginSharedComponent,
-    },
-    {
+      component: LoginSharedComponent
+    }, {
       path: 'privacy-policy',
       component: PrivacyPolicyComponent
     }
