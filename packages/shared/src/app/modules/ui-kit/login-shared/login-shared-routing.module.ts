@@ -9,7 +9,8 @@ const routes: Routes = [{
     {
       path: '',
       component: LoginSharedComponent
-    }, {
+    },
+    {
       path: 'privacy-policy',
       component: PrivacyPolicyComponent
     }
