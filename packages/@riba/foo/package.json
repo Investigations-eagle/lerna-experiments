@@ -1,9 +1,12 @@
 {
   "name": "@riba/foo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "./dist/foo.js",
   "scripts": {},
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  }
 }
