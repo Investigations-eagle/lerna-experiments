@@ -1,6 +1,6 @@
 {
   "name": "@riba/riba",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "./_dist/index.js",
   "scripts": {
