@@ -1,6 +1,6 @@
 {
   "name": "@riba/riba",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "./_dist/index.js",
   "scripts": {
@@ -11,5 +11,6 @@
   "license": "ISC",
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "private": true
 }
