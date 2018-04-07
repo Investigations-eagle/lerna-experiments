@@ -1,0 +1,12 @@
+{
+  "name": "@riba/riba",
+  "version": "1.0.1",
+  "description": "",
+  "main": "./_dist/index.js",
+  "scripts": {
+    "test": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
