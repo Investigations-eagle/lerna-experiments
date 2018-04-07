@@ -1,8 +1,8 @@
 {
   "name": "@riba/riba",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "",
-  "main": "./_dist/index.js",
+  "main": "index.js",
   "scripts": {
     "test": ""
   },
