@@ -1,5 +1,5 @@
 {
-  "name": "@dosandk/shared-modules",
+  "name": "shared-modules",
   "version": "1.0.2",
   "license": "MIT",
   "scripts": {
