@@ -1,7 +1,7 @@
 {
   "name": "@dosandk/shared-modules",
   "main": "./dist/esm2015/dosandk-shared-modules.js",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "license": "MIT",
   "author": "Vladimir Shevchuk <dosandkv@gmail.com>",
   "scripts": {
@@ -17,6 +17,9 @@
     "access": "public",
     "publishPath": "./dist"
   },
+  "lerna": {
+    "publishDir": "dist"
+  },
   "dependencies": {
     "@angular/animations": "^5.2.0",
     "@angular/common": "^5.2.0",
@@ -28,6 +31,7 @@
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
     "core-js": "^2.4.1",
+    "insights": "^0.0.20",
     "ng-packagr": "^2.4.2",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
