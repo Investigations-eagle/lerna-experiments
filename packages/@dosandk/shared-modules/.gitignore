@@ -5,6 +5,7 @@
 /dist-server
 /tmp
 /out-tsc
+.ng_pkg_build
 
 # dependencies
 /node_modules
@@ -41,3 +42,4 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+dist.tgz
