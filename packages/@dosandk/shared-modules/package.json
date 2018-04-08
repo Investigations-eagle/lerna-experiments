@@ -1,6 +1,6 @@
 {
-  "name": "shared-modules",
-  "version": "1.0.2",
+  "name": "@dosandk/shared-modules",
+  "version": "1.0.3",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
