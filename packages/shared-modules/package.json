@@ -1,17 +1,16 @@
 {
-  "name": "shared",
+  "name": "shared-modules",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port 4205",
+    "start": "ng serve",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "packagr": "npm run clean-lib-build build && ng-packagr -p src/app/modules/ui-kit/package.json",
-    "clean-lib-build": "rimraf lib_build/*"
+    "e2e": "ng e2e"
   },
+  "private": true,
   "dependencies": {
     "@angular/animations": "^5.2.0",
     "@angular/common": "^5.2.0",
@@ -22,10 +21,7 @@
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
-    "@eagle/ui-kit": "file:lib_build/@eagle-ui-kit.tgz",
     "core-js": "^2.4.1",
-    "font-awesome": "^4.7.0",
-    "primeng": "^5.2.4",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
   },
@@ -44,9 +40,7 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "ng-packagr": "^2.4.1",
     "protractor": "~5.1.2",
-    "rimraf": "^2.6.2",
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
     "typescript": "~2.5.3"
