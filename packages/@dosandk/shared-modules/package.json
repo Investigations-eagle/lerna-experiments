@@ -1,8 +1,9 @@
 {
   "name": "@dosandk/shared-modules",
   "main": "./dist/esm2015/dosandk-shared-modules.js",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "license": "MIT",
+  "author": "Vladimir Shevchuk <dosandkv@gmail.com>",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
