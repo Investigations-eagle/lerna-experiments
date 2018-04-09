@@ -1,7 +1,7 @@
 {
   "name": "@dosandk/shared-modules",
   "main": "./dist/esm2015/dosandk-shared-modules.js",
-  "version": "3.0.2",
+  "version": "4.0.0",
   "license": "MIT",
   "author": "Vladimir Shevchuk <dosandkv@gmail.com>",
   "scripts": {
