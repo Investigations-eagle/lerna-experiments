@@ -26,6 +26,10 @@ import { AppComponent } from './app.component';
         {
           path: 'login',
           loadChildren: './login/login.module#LoginModule'
+        },
+        {
+          path: 'login-shared',
+          loadChildren: './login-wrapper/login-wrapper.module#LoginWrapperModule'
         }
       ],
       { initialNavigation: 'enabled' }

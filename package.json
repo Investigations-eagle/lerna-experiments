@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "bootstrap": "lerna bootstrap --hoist"
+    "bootstrap": "lerna bootstrap --hoist",
+    "packagr": "lerna run packagr"
   },
   "author": "",
   "license": "ISC",
