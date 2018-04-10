@@ -58,3 +58,4 @@ Example: `lerna add module-1 --scope=module-2 # Install module-1 to module-2`
 * how to make shared ui-controls libs (without lazy loading) @skrechko
 * how to create server for mapping projects to subdomains
 * analyze pros/cons of the lerna approach (compare with nrwl/nx) +
+
