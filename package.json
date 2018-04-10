@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "bootstrap": "lerna bootstrap --hoist",
-    "packagr": "lerna run packagr"
+    "bootstrap": "lerna bootstrap --nohoist --ignore-scripts",
+    "packagr": "lerna run packagr",
+    "clean:node_modules": "lerna clean",
+    "clean:build": "rimraf dist/*",
+    "build": "lerna run build --concurrency 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "lerna": "^2.9.0"
+    "lerna": "^2.9.0",
+    "rimraf": "^2.6.2"
   }
 }

@@ -4,7 +4,7 @@ import {LoginWrapperComponent} from './login-wrapper.component';
 import { RouterModule } from '@angular/router';
 
 import { LoginModule } from '@dosandk/shared-modules';
-
+console.error('LoginModule', LoginModule);
 @NgModule({
   imports: [
     CommonModule,

@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port=4209",
-    "build": "ng build --prod",
+    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -21,7 +21,6 @@
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
-    "@eagle/ui-kit": "file:../shared/lib_build/@eagle-ui-kit.tgz",
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",
     "primeng": "^5.2.4",

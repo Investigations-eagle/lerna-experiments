@@ -3,8 +3,8 @@
 ## To start project:
 * `npm install --global lerna`
 * `npm install`
+* `npm run bootstrap`
 * `npm run packagr`
-* `npm rub bootstrap`
 
 ## Project structure
 
@@ -46,6 +46,10 @@
 
 * `lerna add <package>[@version] [--dev]`  
 Example: `lerna add module-1 --scope=module-2 # Install module-1 to module-2`
+
+## Lerna clean all node_modules
+
+* `lerna clean`
 
 ## TODO: Find answers to next questions:
 
