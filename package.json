@@ -9,7 +9,8 @@
     "packagr": "lerna run packagr",
     "clean:node_modules": "lerna clean",
     "clean:build": "rimraf dist/*",
-    "build": "lerna run build --concurrency 1"
+    "build": "lerna run build --concurrency 1",
+    "ensureEverythingCommited": "git diff --quiet --exit-code && git diff --quiet --exit-code --cached"
   },
   "author": "",
   "license": "ISC",
