@@ -51,11 +51,8 @@ Example: `lerna add module-1 --scope=module-2 # Install module-1 to module-2`
 
 * `lerna clean`
 
-## TODO: Find answers to next questions:
+## TODO: Discuss next questions:
 
-* how to lazy load module with sub routes (for ex. login module) + @dosandk
-* how to crate shared libs bundle (moment + highcharts, etc.) + @skrechko
-* how to make shared ui-controls libs (without lazy loading) @skrechko
-* how to create server for mapping projects to subdomains
-* analyze pros/cons of the lerna approach (compare with nrwl/nx) +
-
+* where we will store our packages? artifactory?
+* do we have configuration for users permission on backend side? 
+* do we need endpoint for list of applications available for user? Who can add this?
