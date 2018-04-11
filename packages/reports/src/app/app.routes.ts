@@ -14,6 +14,10 @@ export const appRoutes: Routes = [
   {
     path: '',
     component: BaseComponent,
+  },
+  {
+    path: 'login',
+    loadChildren: './login-wrapper/login-wrapper.module#LoginWrapperModule'
   }
 ];
 

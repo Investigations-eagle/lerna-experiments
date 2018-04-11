@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "bootstrap": "lerna bootstrap --nohoist --ignore-scripts",
+    "bootstrap": "lerna bootstrap --hoist --ignore-scripts",
     "packagr": "lerna run packagr",
     "clean:node_modules": "lerna clean",
     "clean:build": "rimraf dist/*",
