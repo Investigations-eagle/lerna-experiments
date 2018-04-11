@@ -56,3 +56,8 @@ Example: `lerna add module-1 --scope=module-2 # Install module-1 to module-2`
 * where we will store our packages? artifactory?
 * do we have configuration for users permission on backend side? 
 * do we need endpoint for list of applications available for user? Who can add this?
+
+## TODO: Need to fix
+
+* fix build with aot flag
+* check rollup https://github.com/rollup/rollup
