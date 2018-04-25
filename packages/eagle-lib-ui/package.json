@@ -1,0 +1,21 @@
+{
+  "name": "eagle-lib-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copy-f": "ts-node copy-files.js",
+    "build-ts": "tsc",
+    "watch-ts": "tsc -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "~6.0.60",
+    "typescript": "^2.8.3",
+    "ts-node": "~4.1.0",
+    "shelljs": "^0.8.1"
+  }
+}

@@ -1,21 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
 import { AppComponent } from './app.component';
+import { sharedLib, sharedLib2, sharedLib3 } from 'eagle-lib-ui';
 
-// Shared lib after install
-import { BaseComponent } from "./components/base";
-import { AppRouterModule } from "./app.routes";
+console.log(sharedLib());
+console.log(sharedLib2());
+console.log(sharedLib3());
 
 @NgModule({
   declarations: [
-    AppComponent,
-    BaseComponent
+    AppComponent
   ],
   imports: [
-    BrowserModule,
-    AppRouterModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

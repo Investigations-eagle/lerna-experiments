@@ -3,13 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "typescript": {
+    "main": "index.ts"
+  },
   "scripts": {
     "start-server": "nodemon static-server.js",
-    "bootstrap": "lerna bootstrap --hoist --ignore-scripts",
+    "bootstrap": "lerna bootstrap  --stream --hoist --ignore-scripts",
     "packagr": "lerna run packagr",
     "clean:node_modules": "lerna clean",
     "clean:build": "rimraf dist/*",
     "build": "lerna run build --concurrency 1",
+    "start:reports": "lerna run start --stream --scope reports",
+    "start:insights": "lerna run start --stream --scope insights",
     "ensureEverythingCommited": "git diff --quiet --exit-code && git diff --quiet --exit-code --cached"
   },
   "author": "",
