@@ -18,8 +18,8 @@
       ]
     }
   },
-  "exclude": ["./index.ts"],
   "include": [
     "src/lib/**/*.ts"
-  ]
+  ],
+  "exclude": ["./**/*.d.ts"]
 }
