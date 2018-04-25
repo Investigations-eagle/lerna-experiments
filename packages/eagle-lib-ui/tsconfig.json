@@ -8,7 +8,7 @@
     "emitDecoratorMetadata": true,
     "sourceMap": true,
     "declaration": true,
-    "outDir": ".",
+    "outDir": "./dist",
     "rootDir": "./src/lib",
     "baseUrl": "./",
     "paths": {
