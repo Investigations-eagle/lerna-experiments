@@ -2,26 +2,17 @@
   "name": "lerna-experiments",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "typescript": {
-    "main": "index.ts"
-  },
+  "author": "",
   "scripts": {
-    "start-server": "nodemon static-server.js",
     "bootstrap": "lerna bootstrap  --stream --hoist --ignore-scripts",
-    "packagr": "lerna run packagr",
     "clean:node_modules": "lerna clean",
-    "clean:build": "rimraf dist/*",
     "build": "lerna run build  --stream --concurrency 5",
     "start:reports": "lerna run start --stream --scope @eagle/app-reports",
     "start:insights": "lerna run start --stream --scope @eagle/app-insights",
     "ensureEverythingCommited": "git diff --quiet --exit-code && git diff --quiet --exit-code --cached"
   },
-  "author": "",
   "license": "ISC",
   "devDependencies": {
-    "lerna": "^2.9.0",
-    "rimraf": "^2.6.2",
-    "static-server": "^2.2.1"
+    "lerna": "^2.9.0"
   }
 }
