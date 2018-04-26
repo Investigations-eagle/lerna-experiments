@@ -1,0 +1,17 @@
+{
+  "name": "@eagle/server-static",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "copy:app-dists": "node ./scripts/copy-dists.js",
+    "start:server": "node ./scripts/static-server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "rimraf": "^2.6.2",
+    "static-server": "^2.2.1",
+    "shelljs": "^0.8.1"
+  }
+}
