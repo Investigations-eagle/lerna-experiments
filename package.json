@@ -12,9 +12,9 @@
     "packagr": "lerna run packagr",
     "clean:node_modules": "lerna clean",
     "clean:build": "rimraf dist/*",
-    "build": "lerna run build --concurrency 1",
-    "start:reports": "lerna run start --stream --scope reports",
-    "start:insights": "lerna run start --stream --scope insights",
+    "build": "lerna run build  --stream --concurrency 5",
+    "start:reports": "lerna run start --stream --scope @eagle/app-reports",
+    "start:insights": "lerna run start --stream --scope @eagle/app-insights",
     "ensureEverythingCommited": "git diff --quiet --exit-code && git diff --quiet --exit-code --cached"
   },
   "author": "",

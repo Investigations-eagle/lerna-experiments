@@ -1,16 +1,21 @@
 {
-  "name": "insights",
-  "version": "0.0.0",
-  "license": "MIT",
+  "name": "@eagle/lib-components",
+  "version": "1.0.0",
+  "description": "",
+  "types": "./dist/bundles/eagle-lib-components.d.ts",
+  "main": "./dist/bundles/eagle-lib-components.umd.js",
+  "module": "./dist/esm5/eagle-lib-components.js",
+  "es2015": "./dist/esm2015/eagle-lib-components.js",
+  "typings": "./dist/eagle-lib-components.d.ts",
+  "metadata": "./dist/eagle-lib-components.metadata.json",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve --port=4002",
-    "build": "ng build --prod",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "clean": "rimraf dist",
+    "packagr": "ng-packagr -p ./src/lib/package.json",
+    "ci": "npm run clean && npm run packagr",
+    "publish-custom": "npm publish dist"
   },
-  "private": true,
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "@angular/animations": "^5.2.0",
     "@angular/common": "^5.2.0",
@@ -21,7 +26,7 @@
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
-    "eagle-lib-ui": "1.0.0",
+    "@eagle/lib-scripts": "^1.0.0",
     "core-js": "^2.4.1",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
@@ -41,9 +46,12 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "ng-packagr": "^2.4.2",
     "protractor": "~5.1.2",
+    "rimraf": "^2.6.2",
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
-    "typescript": "~2.5.3"
+    "typescript": "~2.5.3",
+    "tslib": "^1.7.1"
   }
 }

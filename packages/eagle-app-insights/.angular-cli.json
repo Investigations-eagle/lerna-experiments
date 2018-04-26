@@ -1,13 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "reports"
+    "name": "@eagle/app-insights"
   },
   "apps": [
     {
       "root": "src",
-      "outDir": "../../dist/reports",
-      "baseHref" : "./",
+      "outDir": "dist",
       "assets": [
         "assets",
         "favicon.ico"

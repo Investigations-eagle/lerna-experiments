@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/ng-packagr/package.schema.json",
-  "name": "eagle-lib-ui",
+  "name": "@eagle/lib-components",
   "version": "1.0.0",
   "author": "",
   "license": "ISC",

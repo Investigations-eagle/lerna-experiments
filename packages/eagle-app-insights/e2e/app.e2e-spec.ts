@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('insights App', () => {
+describe('eagle-app-insights App', () => {
   let page: AppPage;
 
   beforeEach(() => {
