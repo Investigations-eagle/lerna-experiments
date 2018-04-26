@@ -3,14 +3,15 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-
+import { EagleControlModule } from 'eagle-lib-ui';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    EagleControlModule
   ],
   providers: [],
   bootstrap: [AppComponent]

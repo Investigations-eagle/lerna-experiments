@@ -4,10 +4,15 @@
     "outDir": "../out-tsc/app",
     "baseUrl": "./",
     "module": "es2015",
-    "types": []
+    "types": [],
+    "paths": {
+      "eagle-lib-ui": ["../../lib/index.ts"],
+      "eagle-lib-ui/*": ["../../lib/*"]
+    }
   },
   "exclude": [
     "test.ts",
-    "**/*.spec.ts"
+    "**/*.spec.ts",
+    "../../*.spec.ts"
   ]
 }
