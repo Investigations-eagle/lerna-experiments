@@ -1,0 +1,55 @@
+// Respond to a breakpoint by name: names are pulled from /utils/variables > $breakpoints
+@mixin respond-to($name) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $name) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+    // If the key doesn't exist in the map
+  @else {
+    //@warn "Unfortunately, no value could be retrieved from `#{$breakpoints}`. "
+    //    + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+// Generate a color palette based onf the passed array of colors
+@mixin gen-palette($colorsArray) {
+  @each $colorName, $colorValue in $colorsArray{
+    @if(ends-with($colorName, 'G')) {
+      .#{str-replace($colorName, 'G', '')}-bg-gradient {
+        background-image: map_get($colorsArray, $colorName)
+      }
+    } @else {
+      .#{str-replace($colorName, 'F', '')}-color {
+        color: map_get($colorsArray, $colorName);
+      }
+      .#{str-replace($colorName, 'F', '')}-bg {
+        background-color: map_get($colorsArray, $colorName);
+      }
+      .#{str-replace($colorName, 'F', '')}-border {
+        border: 1px solid map_get($colorsArray, $colorName);
+      }
+    }
+  }
+}
+
+.input-height-mixin {
+  height: $inputHeight;
+  line-height: $inputHeight;
+}
+
+.ei-highlight {
+  background: theme-color(gold2F);
+  color: theme-color(whiteF);
+  border-radius: 0;
+}
+
+.ei-dropdown-item {
+  font-size: em(12px);
+  color: theme-color(gold2F);
+  text-transform: uppercase;
+  padding: em(14px);
+  margin: 0;
+}

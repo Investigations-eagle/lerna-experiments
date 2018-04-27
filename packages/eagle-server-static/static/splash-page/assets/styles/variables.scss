@@ -1,0 +1,61 @@
+$breakpoints: (
+  'phone' : ( max-width:  767px ),
+  'tablet'  : ( max-width:  1023px ),
+  'desktop'  : ( min-width: 1024px )
+);
+$navbarHeight: 40px;
+$inputHeight: 40px;
+$font-primary: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-secondary: 'Roboto Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$base-font-size: 16px; // Default font size
+$default-text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.15);
+
+$color-red: #EF3B3A;
+
+$bg-clearAll: #3c4d57;
+
+$bg-countryExposure: #00B1F0;
+$bg-currencyExposure: #43B02A;
+$bg-durationExposure: #345f9f;
+$bg-maturityExposure: #e999ac;
+$bg-creditRatingExposure: #43B02A;
+$bg-performanceAnalysis: #7cb5ec;
+$bg-aumAccounts: #673ab7;
+$bg-aumCountries : #410928;
+$bg-aumClientTypes: #081d50;
+$bg-aumCurrencyStrategy: #34a7b5;
+$bg-aumPrimaryManagers: #0057B8;
+$bg-aumMandates: #081d50;
+$bg-aumInvestmentTypes: #0f3b3e;
+$bg-aumAssetClasses: #05153c;
+$bg-positionsStatus-1: #1d3570;
+$bg-positionsStatus-2: #1843ad;
+$bg-positionsStatus-3: #4e74d4;
+$bg-positionsStatus-4: #688de8;
+$bg-positionsStatus-5: #7b98e3;
+
+$bg-assetDistribution-eq: #345f9f;
+$bg-assetDistribution-st: #d3b27d;
+$bg-assetDistribution-fi: #ff7f50;
+$bg-assetDistribution-cash: #7ccc2b;
+$bg-assetDistribution-fwd: #e7c1ff;
+$bg-assetDistribution-op: #994C00;
+$bg-assetDistribution-xx: #2f7ed8;
+
+$border-tooltop: #7cb5ec;
+
+$legendPrimary: #555555;
+$legendSecondary: #777777;
+
+$bg-tooltip: #111111;
+$tooltip-text: #f7f7f7;
+$tooltip-header-text: #cccccc;
+$bg-crosshair: #fff;
+
+$btn-text: #776737;
+$btn-active-text: #212121;
+$btn-border: #f0f0f0;
+
+$aum-list-stripe: rgba(213, 214, 214, 0.8);
+$aum-list-head-border: #9c9da0;
+$aum-list-head-text: #777;

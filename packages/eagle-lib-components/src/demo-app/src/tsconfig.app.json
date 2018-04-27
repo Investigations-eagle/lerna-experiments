@@ -6,8 +6,8 @@
     "module": "es2015",
     "types": [],
     "paths": {
-      "@eagle/lib-components": ["../../lib/index.ts"],
-      "@eagle/lib-components/*": ["../../lib/*"]
+      "@eagle/lib-components": ["../../lib/components/index.ts"],
+      "@eagle/lib-components/*": ["../../lib/components/*"]
     }
   },
   "exclude": [

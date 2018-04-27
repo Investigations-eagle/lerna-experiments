@@ -1,51 +1,46 @@
 // https://www.npmjs.com/package/static-server
+const StaticServer = require('static-server');
 
-var StaticServer = require('static-server');
-var server = new StaticServer({
-    rootPath: './static/insights',     // required, the root of the server file tree
-    port: 8081,                          // required, the port to listen
-    name: 'insights-http-server',      // optional, will set "X-Powered-by" HTTP header
-    host: '127.0.0.1',                 // optional, defaults to any interface
-    cors: '*',
-    debug: true,                        // optional, defaults to undefined
-    followSymlink: true,                // optional, defaults to a 404 error
-    templates: {
-      index: 'index.html'
+const apps = [
+    {
+        name: 'EAGLE_INSIGHT_SERVER',
+        rootPath: './static/insights',
+        port: 3001
+    },
+    {
+        name: 'EAGLE_REPORTS_SERVER',
+        rootPath: './static/reports',
+        port: 3002
+    },
+    {
+        name: 'EAGLE_SPLASH_SERVER',
+        rootPath: './static/splash-page',
+        port: 3003
     }
-});
+];
 
-server.start(function () {
-    console.log('Server listening to', server.port);
-});
+function createServer(options) {
+    const server = new StaticServer({
+        rootPath: options.rootPath,     // required, the root of the server file tree
+        port: options.port,             // optional, will set "X-Powered-by" HTTP header
+        name: options.name,
+        host: '127.0.0.1',                 // optional, defaults to any interface
+        cors: '*',
+        debug: true,                        // optional, defaults to undefined
+        followSymlink: true,                // optional, defaults to a 404 error
+        templates: {
+            index: 'index.html'
+        }
+    });
 
-server.on('request', function (req, res) {
-    // req.path is the URL resource (file name) from server.rootPath
-    // req.elapsedTime returns a string of the request's elapsed time
-    console.log('req.path', req.path);
-});
+    server.start(function () {
+        console.log('Server ' + options.name + ' listening to port ::', server.port);
+    });
 
-
-var server2 = new StaticServer({
-    rootPath: './static/reports',     // required, the root of the server file tree
-    port: 8082,                          // required, the port to listen
-    name: 'insights-http-server',      // optional, will set "X-Powered-by" HTTP header
-    host: '127.0.0.1',                 // optional, defaults to any interface
-    cors: '*',
-    debug: true,                        // optional, defaults to undefined
-    followSymlink: true,                // optional, defaults to a 404 error
-    templates: {
-        index: 'index.html'
-    }
-});
-
-server2.start(function () {
-    console.log('Server listening to', server2.port);
-});
-
-server2.on('request', function (req, res) {
-    // req.path is the URL resource (file name) from server.rootPath
-    // req.elapsedTime returns a string of the request's elapsed time
-    console.log('req.path', req.path);
-});
+    server.on('request', function (req, res) {
+        console.log(options.name + ':: ', req.path);
+    });
+}
 
 
+apps.forEach((appOptions) => createServer(appOptions));
