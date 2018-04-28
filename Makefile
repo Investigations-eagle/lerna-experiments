@@ -5,12 +5,15 @@ list:
 clean-node-modules:
 	./node_modules/.bin/lerna clean
 
+clean-all: clean-node-modules
+	rm -r node_modules;
+
 # private
-install:
-	make lerna-clean
+install-npm:
+	rm -r node_modules;\
 	npm i;
 
-bootstrap-repo: install
+bootstrap-repo: install-npm
 	./node_modules/.bin/lerna bootstrap --stream --hoist --ignore-scripts -- --ignore-engines
 	make list
 
