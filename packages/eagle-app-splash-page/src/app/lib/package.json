@@ -1,0 +1,29 @@
+{
+  "$schema": "./node_modules/ng-packagr/package.schema.json",
+  "name": "@eagle/lib-components",
+  "version": "1.0.0",
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "@angular/animations": "^5.2.0",
+    "@angular/common": "^5.2.0",
+    "@angular/compiler": "^5.2.0",
+    "@angular/core": "^5.2.0",
+    "@angular/forms": "^5.2.0",
+    "@angular/http": "^5.2.0",
+    "@angular/platform-browser": "^5.2.0",
+    "@angular/platform-browser-dynamic": "^5.2.0",
+    "@angular/router": "^5.2.0",
+    "core-js": "^2.4.1",
+    "rxjs": "^5.5.6",
+    "zone.js": "^0.8.19"
+  },
+  "main": "bundles/eagle-lib-components.umd.js",
+  "module": "esm5/eagle-lib-components.js",
+  "es2015": "esm2015/eagle-lib-components.js",
+  "typings": "eagle-lib-components.d.ts",
+  "metadata": "eagle-lib-components.metadata.json",
+  "dependencies": {
+    "tslib": "^1.7.1"
+  }
+}

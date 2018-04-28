@@ -2,9 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppsListComponent } from './apps-list/apps-list.component';
 import { SplashScreenComponent } from './splash-screen/splash-screen.component';
-import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { AppRouterModule } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -12,24 +12,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(
-      [
-        {
-          path: '',
-          component: SplashScreenComponent,
-          pathMatch: 'full'
-        },
-        {
-          path: 'apps-list',
-          component: AppsListComponent
-        },
-        {
-          path: 'login',
-          loadChildren: './login/login.module#LoginModule'
-        }
-      ],
-      { initialNavigation: 'enabled' }
-    )
+    AppRouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "copy:app-dists": "node ./scripts/copy-dists.js",
-    "start:server": "node ./scripts/static-server.js"
+    "clean:static": "rimraf static",
+    "copy:apps-dists": "node ./scripts/copy-dists.js",
+    "server": "node ./scripts/static-server.js",
+    "start": "npm run clean:static && npm run copy:apps-dists && npm run server"
   },
   "author": "",
   "license": "ISC",

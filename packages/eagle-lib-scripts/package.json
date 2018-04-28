@@ -7,9 +7,10 @@
   "scripts": {
     "compile": "tsc",
     "compile:watch": "tsc -w",
-    "clean": "rimraf dist",
+    "clean:dist": "rimraf dist",
     "ci": "npm run clean && npm run compile",
-    "prepublishOnly": "ci"
+    "packagr": "npm run ci",
+    "prepublishOnly": "npm run ci"
   },
   "author": "",
   "license": "ISC",

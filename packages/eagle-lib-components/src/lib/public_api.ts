@@ -1,2 +1,3 @@
-export { EagleControlModule } from './components/eagle-control/eagle-control.module';
-export { LoginModule } from './components/login/login.module';
+// export { EagleControlModule } from './eagle-control/eagle-control.module';
+// export * from './login/login.module';
+export * from "./example-four/example-four.module";

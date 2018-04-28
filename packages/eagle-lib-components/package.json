@@ -9,9 +9,17 @@
   "typings": "./dist/eagle-lib-components.d.ts",
   "metadata": "./dist/eagle-lib-components.metadata.json",
   "scripts": {
-    "clean": "rimraf dist",
+    "ng": "ng",
+    "start": "ng serve",
+    "build-demo": "ng build --prod",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+
+    "copy:assets": "node ./scripts/copy-assets.js",
+    "clean:dist": "rimraf dist",
     "packagr": "ng-packagr -p ./src/lib/package.json",
-    "ci": "npm run clean && npm run packagr",
+    "ci": "npm run clean:dist && npm run packagr && npm run copy:assets",
     "publish-custom": "npm publish dist"
   },
   "author": "",
