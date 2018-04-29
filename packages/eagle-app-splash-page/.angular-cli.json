@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "@eagle/app-splash-page"
+    "name": "eagle-app-splash-page"
   },
   "apps": [
     {
@@ -9,12 +9,7 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico",
-        {
-          "input": "./app/login/assets",
-          "output": "./assets/",
-          "glob": "**/*"
-        }
+        "favicon.ico"
       ],
       "index": "index.html",
       "main": "main.ts",

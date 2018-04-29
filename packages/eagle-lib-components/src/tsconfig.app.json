@@ -6,13 +6,11 @@
     "module": "es2015",
     "types": [],
     "paths": {
-      "@eagle/lib-components": ["./lib/index.ts"],
-      "@eagle/lib-components/*": ["./lib/*"]
+      "eagle-lib-components": ["./app/lib/index.ts"]
     }
   },
   "exclude": [
     "test.ts",
-    "**/*.spec.ts",
-    "../../*.spec.ts"
+    "**/*.spec.ts"
   ]
 }

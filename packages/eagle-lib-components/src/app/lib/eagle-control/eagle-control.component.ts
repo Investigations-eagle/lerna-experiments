@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { EGLogger } from '@eagle/lib-scripts';
+import { EGLogger } from 'eagle-lib-scripts';
 
 @Component({
   selector: 'app-eagle-control',

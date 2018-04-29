@@ -6,10 +6,9 @@ declare const System: any;
 
 export function loadLoginModule() {
   return System
-    .import('@eagle/lib-components')
+    .import('eagle-lib-components')
     .then(function(module) {
-      console.log('module', module);
-      return module.ExampleFourModule;
+      return module.LoginModule;
     });
 }
 
@@ -24,7 +23,7 @@ export const appRoutes: Routes = [
     component: AppsListComponent
   },
   {
-    path: 'four',
+    path: 'login',
     loadChildren: loadLoginModule
   },
   {

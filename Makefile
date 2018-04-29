@@ -2,10 +2,11 @@ list:
 	./node_modules/.bin/lerna ls
 
 # private
-clean-node-modules:
+clean-packages-node-modules:
 	./node_modules/.bin/lerna clean
 
-clean-all: clean-node-modules
+clean-node-modules: clean-packages-node-modules
+	@echo "${GREEN}Remove common node_modules... ${NC}";
 	rm -r node_modules;
 
 # private
@@ -17,7 +18,7 @@ bootstrap-repo: install-npm
 	./node_modules/.bin/lerna bootstrap --stream --hoist --ignore-scripts -- --ignore-engines
 	make list
 
-update: clean-node-modules
+update: clean-packages-node-modules
 	rm -rf $(1)/*/package-lock.json
 	./node_modules/.bin/lerna bootstrap --stream --hoist --ignore-scripts -- --ignore-engines
 	make list

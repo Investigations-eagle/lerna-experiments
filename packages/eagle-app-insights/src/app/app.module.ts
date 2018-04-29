@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-import { EagleControlModule } from '@eagle/lib-components';
-import { EGLogger } from '@eagle/lib-scripts';
+import { EagleControlModule } from 'eagle-lib-components';
+import { EGLogger } from 'eagle-lib-scripts';
 
 @NgModule({
   declarations: [

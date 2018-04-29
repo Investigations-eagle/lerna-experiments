@@ -4,13 +4,13 @@ import { RouterModule } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
-import { EagleControlModule } from 'back-index.ts';
+import { EagleControlModule } from 'eagle-lib-components';
 
 declare const System: any;
 
 export function loadLoginModule() {
   return System
-    .import('@eagle/lib-components')
+    .import('eagle-lib-components')
     .then(function(module) {
       return module.LoginModule;
     });
