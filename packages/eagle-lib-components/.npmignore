@@ -1,0 +1,13 @@
+!dist
+!package.json
+dist/package.json
+src
+e2e
+scripts
+*.js
+*.json
+*.ini
+*.tgz
+*.editorconfig
+*.angular-cli.config
+node_modules
