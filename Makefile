@@ -1,5 +1,29 @@
+RED=\033[0;31m
+BOLD_RED=\033[1;31m
+GREEN=\033[0;32m
+BOLD_GREEN=\033[1;32m
+BLUE=\033[0;34m
+BOLD_BLUE=\033[1;34m
+BOLD=\033[1m
+NC=\033[0m
+
+STATUS_ERROR := ${BOLD_RED}✘${NC} Error
+STATUS_OK := ${BOLD_GREEN}✔${NC} OK
+
+APP_SPLASH_PAGE=eagle-app-splash-page
+LIB_COMPONENTS=eagle-lib-components
+
 list:
 	./node_modules/.bin/lerna ls
+
+tree-help:
+	./node_modules/.bin/tree --help
+
+tree: depth ?= 5
+tree:
+	cd ./
+	@echo "${GREEN}Project structure without node_modules... ${NC}";\
+ 	./node_modules/.bin/tree -d -l $(depth) --ignore node_modules
 
 # private
 clean-packages-node-modules:
@@ -36,15 +60,14 @@ build-all:
 	make packagr
 	./node_modules/.bin/lerna run build --stream
 
-start-server-static: build-all static-server
-
 static-server:
 	cd packages/eagle-server-static;\
 	npm run start;
 
+start-server-static: build-all static-server
 
 fix-router:
-	./node_modules/.bin/lerna run packagr --scope @eagle/lib-components;\
-	./node_modules/.bin/lerna run build --stream --scope @eagle/app-splash-page;\
+	./node_modules/.bin/lerna run packagr --scope $(LIB_COMPONENTS);\
+	./node_modules/.bin/lerna run build --stream --scope $(APP_SPLASH_PAGE);\
 	make static-server;
 
