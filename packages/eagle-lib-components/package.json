@@ -19,7 +19,6 @@
     "copy:assets": "node ./scripts/copy-assets.js",
     "clean:dist": "rimraf dist",
     "packagr": "ng-packagr -p ./src/app/lib/package.json",
-    "x-packagr": "ts-node src/app/lib/build.ts",
     "ci": "npm run clean:dist && npm run packagr && npm run copy:assets",
     "publish-custom": "npm publish dist"
   },
