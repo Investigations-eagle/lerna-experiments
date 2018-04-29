@@ -1,33 +1,38 @@
-// https://www.npmjs.com/package/static-server
-const StaticServer = require('static-server');
+const StaticServer         = require('static-server');
+const proxy                = require('subdomain-router');
+const BASE_HOST            = 'eagle.local';
+const PROXY_PORT           = 9000;
+const SPLASH_PAGE_PORT     = 3003;
+const INSIGHTS_PORT        = 3001;
+const REPORTS_PORT         = 3002;
 
 const apps = [
     {
         name: 'EAGLE_INSIGHT_SERVER',
         rootPath: './static/insights',
-        port: 3001
+        port: INSIGHTS_PORT
     },
     {
         name: 'EAGLE_REPORTS_SERVER',
         rootPath: './static/reports',
-        port: 3002
+        port: REPORTS_PORT
     },
     {
         name: 'EAGLE_SPLASH_SERVER',
         rootPath: './static/splash-page',
-        port: 3003
+        port: SPLASH_PAGE_PORT
     }
 ];
 
 function createServer(options) {
     const server = new StaticServer({
-        rootPath: options.rootPath,     // required, the root of the server file tree
-        port: options.port,             // optional, will set "X-Powered-by" HTTP header
+        rootPath: options.rootPath,
+        port: options.port,
         name: options.name,
-        host: '127.0.0.1',                 // optional, defaults to any interface
+        host: BASE_HOST,
         cors: '*',
-        debug: true,                        // optional, defaults to undefined
-        followSymlink: true,                // optional, defaults to a 404 error
+        debug: true,
+        followSymlink: true,
         templates: {
             index: 'index.html'
         }
@@ -44,3 +49,14 @@ function createServer(options) {
 
 
 apps.forEach((appOptions) => createServer(appOptions));
+
+const proxyServer = proxy({
+    host: BASE_HOST,
+    subdomains: {
+        'splash':   SPLASH_PAGE_PORT,
+        'insights': INSIGHTS_PORT,
+        'reports':  REPORTS_PORT
+    }
+});
+
+proxyServer.listen(PROXY_PORT);

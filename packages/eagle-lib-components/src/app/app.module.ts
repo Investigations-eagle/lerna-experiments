@@ -1,20 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-
 
 import { AppComponent } from './app.component';
-import { EagleControlModule } from 'eagle-lib-components';
-
-declare const System: any;
-
-export function loadLoginModule() {
-  return System
-    .import('eagle-lib-components')
-    .then(function(module) {
-      return module.LoginModule;
-    });
-}
+import { EagleControlModule, LoginModule } from 'eagle-lib-components';
 
 
 @NgModule({
@@ -24,9 +12,7 @@ export function loadLoginModule() {
   imports: [
     BrowserModule,
     EagleControlModule,
-    RouterModule.forRoot([{
-      path: 'login', pathMatch: 'full', loadChildren: loadLoginModule
-    }])
+    LoginModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

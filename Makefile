@@ -64,7 +64,7 @@ static-server:
 	cd packages/eagle-server-static;\
 	npm run start;
 
-start-server-static: build-all static-server
+server-static-up: build-all static-server
 
 fix-router:
 	./node_modules/.bin/lerna run packagr --scope $(LIB_COMPONENTS);\
