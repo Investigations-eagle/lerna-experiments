@@ -1,8 +1,7 @@
 {
   "lerna": "2.9.0",
   "packages": [
-    "packages/*",
-    "packages/eagle-lib-components/src/demo-app/"
+    "packages/*"
   ],
   "version": "independent"
 }
