@@ -1,10 +1,5 @@
-const StaticServer         = require('static-server');
-const proxy                = require('subdomain-router');
-const BASE_HOST            = 'eagle.local';
-const PROXY_PORT           = 9000;
-const SPLASH_PAGE_PORT     = 3003;
-const INSIGHTS_PORT        = 3001;
-const REPORTS_PORT         = 3002;
+const StaticServer  = require('static-server');
+const proxy         = require('subdomain-router');
 
 /**
  * Hosts setup
@@ -14,12 +9,16 @@ const REPORTS_PORT         = 3002;
  * 127.0.0.1    reports.eagle.local     www.reports.eagle.local
  * 127.0.0.1    insights.eagle.local    www.insights.eagle.local
  * */
-
+const BASE_HOST   = 'eagle.local';
 const SUB_DOMAINS = {
   splash:   'my',
   reports:  'reports',
   insights: 'insights',
 };
+const PROXY_PORT           = 9000;
+const SPLASH_PAGE_PORT     = 3003;
+const INSIGHTS_PORT        = 3001;
+const REPORTS_PORT         = 3002;
 
 const apps = [
     {
