@@ -8,12 +8,15 @@ const proxy         = require('subdomain-router');
  * 127.0.0.1    my.eagle.local          www.my.eagle.local
  * 127.0.0.1    reports.eagle.local     www.reports.eagle.local
  * 127.0.0.1    insights.eagle.local    www.insights.eagle.local
+ * # More POC apps ...
  * */
+
 const BASE_HOST   = 'eagle.local';
 const SUB_DOMAINS = {
   splash:   'my',
   reports:  'reports',
-  insights: 'insights',
+  insights: 'insights'
+  // More apps ...
 };
 const PROXY_PORT           = 9000;
 const SPLASH_PAGE_PORT     = 3003;
@@ -36,6 +39,7 @@ const apps = [
         rootPath: './static/splash-page',
         port: SPLASH_PAGE_PORT
     }
+    // More apps ...
 ];
 
 function createServer(options) {
@@ -48,12 +52,12 @@ function createServer(options) {
         debug: true,
         followSymlink: true,
         templates: {
-            index: 'index.html'
+          index: 'index.html'
         }
     });
 
     server.start(function () {
-        console.log('Server ' + options.name + ' listening to port ::', server.port);
+        console.log('Redirect server ' + options.name + ' listening to port ::', server.port);
     });
 
     server.on('request', function (req) {
@@ -64,13 +68,23 @@ function createServer(options) {
 
 apps.forEach((appOptions) => createServer(appOptions));
 
+// Sub domains proxy router
 const proxyServer = proxy({
     host: BASE_HOST,
+    messages: {
+      invalid: 'I don\'t know about this subdomain',
+      down: 'This app or service is down right now'
+    },
     subdomains: {
-        [SUB_DOMAINS.splash]:    SPLASH_PAGE_PORT,
+        [SUB_DOMAINS.splash]  :  SPLASH_PAGE_PORT,
         [SUB_DOMAINS.insights]:  INSIGHTS_PORT,
-        [SUB_DOMAINS.reports]:   REPORTS_PORT
+        [SUB_DOMAINS.reports] :  REPORTS_PORT
+        // Other app ...
     }
 });
 
-proxyServer.listen(PROXY_PORT);
+proxyServer.listen(
+  PROXY_PORT,
+  () => console.log(`MAIN server on [http://${SUB_DOMAINS.splash}.${BASE_HOST}:${PROXY_PORT}],
+    with subdomains [${Object.values(SUB_DOMAINS)}]`)
+);

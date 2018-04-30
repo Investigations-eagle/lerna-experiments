@@ -1,46 +1,51 @@
 # Lerna experiment
 
+ For extended commands via Makefile see `CONTRIBUTING.md`.
+
 ## To start project:
 * `npm install --global lerna`
 * `npm install`
-* `npm run bootstrap`
-* `npm run packagr`
+* `npm run bootstrap --stream --hoist`
+* `npm run packagr --stream`
 
 ## Project structure
 
 ```
-|__ dist
-|__ node_modules
-|__ packages # lerna packages
-    |__ app-reports
-    |__ app-insights
-    |__ app-splash-page
+|__ node_modules                  # hoisted common npm modules
+|__ packages                      # lerna packages
+    |__ eagle-app-reports         # lerna scope (A)
+    |     |__node_modules         # link to common npm modles
+    |__ eagle-app-insights        # lerna scope (B)
+    |     |__node_modules         # link to common npm modles
+    |__ eagle-app-splash-page     # lerna scope (C)
+    |     |__node_modules         # link to common npm modles
     |__ ...
-    |__ @eagle # npm scope
-            |__ shared-ng-modules # angular modules
-                |__ module-1
-                |__ module-2
-                |__ module-n
-                |__ ...
-            |__ shared-libs # not angular libs
-    |__ @another-scope # npm scope
-            |__ shared-ng-modules # angular modules
-            |__ shared-libs # not angular libs
+    |__ eagle-lib-components      # lerna scope (D). Shared Angular modules 
+    |     |__ module-1            # Ng module
+    |     |__ module-n
+    |     |__ ...
+    | 
+    |__ eagle-lib-scripts          # lerna scope (E). Shared-libs not angular libs       
+    |     |__ shared-sript-modules # not angular modules
+    |     |__ shared-script        # not angular libs
+    |     |__ shared-js-lib
+    |
+    |__ eagle-server-static        # lerna scope (F). Prod subdomain POC demo
     |__ ...
 ```
 
 ## To serve app:
-* `lerna run start --scope <app-name>`
+* `lerna run start --stream --scope <app-name>`
 
 ## Build apps:
 
-* Build all apps: `lerna run build`
-* Build certain app: `lerna run build --scope <app-name>`
+* Build all apps: `lerna run build  --stream`
+* Build certain app: `lerna run build --stream --scope <app-name>`
 
 ## Publish apps:
 
 * Publish all apps: `lerna publish`
-* Publish certain app: `lerna publish --scope <app-name>`
+* Publish certain app: `lerna publish --stream --scope <app-name>`
 
 ## Lerna add module
 
