@@ -25,15 +25,16 @@ tree:
 	@echo "${GREEN}Project structure without node_modules... ${NC}";\
  	./node_modules/.bin/tree -d -l $(depth) --ignore node_modules
 
-# private
+# Public
 clean-packages-node-modules:
 	./node_modules/.bin/lerna clean
 
+# Public
 clean-node-modules: clean-packages-node-modules
 	@echo "${GREEN}Remove common node_modules... ${NC}";
 	rm -r node_modules;
 
-# private
+
 install-npm:
 	rm -r node_modules;\
 	npm i;
@@ -47,9 +48,9 @@ update: clean-packages-node-modules
 	./node_modules/.bin/lerna bootstrap --stream --hoist --ignore-scripts -- --ignore-engines
 	make list
 
-# private
+
 packagr:
-	./node_modules/.bin/lerna run packagr
+	./node_modules/.bin/lerna run packagr --stream
 
 # make start app=@eagle/app-insights
 start:

@@ -6,6 +6,21 @@ const SPLASH_PAGE_PORT     = 3003;
 const INSIGHTS_PORT        = 3001;
 const REPORTS_PORT         = 3002;
 
+/**
+ * Hosts setup
+ * ===================================================================
+ * 127.0.0.1    eagle.local             www.eagle.local
+ * 127.0.0.1    my.eagle.local          www.my.eagle.local
+ * 127.0.0.1    reports.eagle.local     www.reports.eagle.local
+ * 127.0.0.1    insights.eagle.local    www.insights.eagle.local
+ * */
+
+const SUB_DOMAINS = {
+  splash:   'my',
+  reports:  'reports',
+  insights: 'insights',
+};
+
 const apps = [
     {
         name: 'EAGLE_INSIGHT_SERVER',
@@ -42,7 +57,7 @@ function createServer(options) {
         console.log('Server ' + options.name + ' listening to port ::', server.port);
     });
 
-    server.on('request', function (req, res) {
+    server.on('request', function (req) {
         console.log(options.name + ':: ', req.path);
     });
 }
@@ -53,9 +68,9 @@ apps.forEach((appOptions) => createServer(appOptions));
 const proxyServer = proxy({
     host: BASE_HOST,
     subdomains: {
-        'splash':   SPLASH_PAGE_PORT,
-        'insights': INSIGHTS_PORT,
-        'reports':  REPORTS_PORT
+        [SUB_DOMAINS.splash]:    SPLASH_PAGE_PORT,
+        [SUB_DOMAINS.insights]:  INSIGHTS_PORT,
+        [SUB_DOMAINS.reports]:   REPORTS_PORT
     }
 });
 
