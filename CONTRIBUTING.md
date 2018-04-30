@@ -18,6 +18,7 @@ Make sure that `@angular/cli` is globally installed with version = `1.7.4`.
  $ git clone https://github.com/Investigations-eagle/lerna-experiments.git
  $ cd lerna-experiments
  $ git checkout clean-development-flow
+ # to inatall all the repo (common and packages) npm dependencies
  $ make bootstrap-repo
 ```
 
@@ -55,6 +56,8 @@ Run app/lib in a watch mode run:
 ```bash
  # To see the list of available apps/libs
  $ make list
+
+ # start some particular app
  $ make start-dev app=eagle-app-insights
 ```
 

@@ -30,8 +30,8 @@
     |     |__ shared-script        # not angular libs
     |     |__ shared-js-lib
     |
-    |__ eagle-server-static        # lerna scope (F). Prod subdomain POC demo
-    |__ ...
+    |__ eagle-server-static        # lerna scope (F). Prod subdomain POC demo server.
+    |__ ...                        # finale AOT build of all the apps
 ```
 
 ## To serve app:
