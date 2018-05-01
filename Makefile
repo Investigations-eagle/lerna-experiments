@@ -46,7 +46,7 @@ bootstrap-repo: install-npm
 	make list
 
 # public command
-update: clean-packages-node-modules
+update-deps: clean-packages-node-modules
 	rm -rf $(1)/*/package-lock.json
 	./node_modules/.bin/lerna bootstrap --stream --hoist --ignore-scripts -- --ignore-engines
 	make list

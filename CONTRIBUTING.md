@@ -71,6 +71,12 @@ Rebuild packages in live mode run:
  $ make packagr-all 
 ```
 
+Update packages npm dependencies simply run:
+
+```bash
+ $ make update-deps
+```
+
 Sample of an update from lib to prod code build:
 
 ```bash
