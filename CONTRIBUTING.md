@@ -44,6 +44,10 @@ Add domains to your `hosts` file:
 To build all apps **once** similar to prod ENV you can either run:
 
 ```bash
+ # deploy all and run demo server
+ $ make server-static-compose-up
+ 
+ # just up demo server
  $ make server-static-up
 ```
 

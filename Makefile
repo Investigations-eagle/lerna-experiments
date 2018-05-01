@@ -67,12 +67,13 @@ build-all:
 	make packagr-all
 	./node_modules/.bin/lerna run build --stream
 
-static-server:
+# public command
+server-static-up:
 	cd packages/eagle-server-static;\
 	npm run start;
 
 # public command
-server-static-up: build-all static-server
+server-static-compose-up: build-all server-static-up
 
 # Sample of set command
 build-lib-fix:
