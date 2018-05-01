@@ -1,7 +1,9 @@
 <div style="text-align:center">
-  <h1>
-    Welcome to Playground!
-  </h1>
+  <h1> Welcome to Playground!</h1>
+  <p>
+    <a [routerLink]="['/login']">Link to Shared LoginModule</a> |
+    <a [routerLink]="['/']">Link to Home</a>
+  </p>
   <app-eagle-control></app-eagle-control>
   <router-outlet></router-outlet>
 </div>
