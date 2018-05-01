@@ -5,7 +5,7 @@ import { EGLogger } from 'eagle-lib-scripts';
 @Component({
   selector: 'app-eagle-control',
   templateUrl: './eagle-control.component.html',
-  styleUrls: ['./eagle-control.component.css']
+  styleUrls: ['./eagle-control.component.scss']
 })
 export class EagleControlComponent {
   constructor() {
