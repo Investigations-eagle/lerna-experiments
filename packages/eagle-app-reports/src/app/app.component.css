@@ -1,0 +1,11 @@
+:host {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: #59f5e5;
+  border-top: 1px solid transparent;
+}
+
+.app-reports {
+  text-align: center;
+}
