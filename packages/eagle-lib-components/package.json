@@ -20,7 +20,7 @@
     "clean:dist": "rimraf dist",
     "packagr": "ng-packagr -p ./src/app/lib/package.json",
     "ci": "npm run clean:dist && npm run packagr && npm run copy:assets",
-    "publish-custom": "npm publish dist"
+    "publish": "npm publish dist"
   },
   "author": "",
   "license": "ISC",
