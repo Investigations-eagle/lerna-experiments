@@ -6,11 +6,12 @@
   "scripts": {
     "bootstrap": "lerna bootstrap  --stream --hoist --ignore-scripts",
     "clean:node_modules": "lerna clean",
+    "lerna:packagr": "lerna run packagr --stream",
     "build": "lerna run build  --stream --concurrency 5",
-    "start:lib-components": "lerna run start --stream --scope @eagle/lib-components",
-    "start:reports": "lerna run start --stream --scope @eagle/app-reports",
-    "start:insights": "lerna run start --stream --scope @eagle/app-insights",
-    "start:splash-page": "lerna run start --stream --scope @eagle/app-splash-page",
+    "start:lib-components": "lerna run start --stream --scope eagle-lib-components",
+    "start:reports": "lerna run start --stream --scope eagle-app-reports",
+    "start:insights": "lerna run start --stream --scope eagle-app-insights",
+    "start:splash-page": "lerna run start --stream --scope eagle-app-splash-page",
     "ensureEverythingCommited": "git diff --quiet --exit-code && git diff --quiet --exit-code --cached"
   },
   "license": "ISC",
