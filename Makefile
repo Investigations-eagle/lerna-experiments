@@ -63,6 +63,11 @@ start-dev:
 	@echo "${GREEN}Starting app=$(app)... ${NC}";
 	./node_modules/.bin/lerna run start --stream --scope $(app)
 
+# build standelone app dist
+# make build appp=eagle-app-insights
+build:
+	./node_modules/.bin/lerna run build --stream --scope $(app)
+
 build-all:
 	make packagr-all
 	./node_modules/.bin/lerna run build --stream
@@ -77,7 +82,7 @@ server-static-compose-up: build-all server-static-up
 
 # Sample of set command
 build-lib-fix:
-	./node_modules/.bin/lerna run packagr --scope $(LIB_COMPONENTS);\
+	./node_modules/.bin/lerna run packagr --stream --scope $(LIB_COMPONENTS);\
 	./node_modules/.bin/lerna run build --stream --scope $(APP_SPLASH_PAGE);\
 	make static-server-up;
 

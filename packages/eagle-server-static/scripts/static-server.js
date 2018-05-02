@@ -85,6 +85,6 @@ const proxyServer = proxy({
 
 proxyServer.listen(
   PROXY_PORT,
-  () => console.log(`MAIN server on [http://${SUB_DOMAINS.splash}.${BASE_HOST}:${PROXY_PORT}],
+  () => console.log(`MAIN server entry point on [http://${SUB_DOMAINS.splash}.${BASE_HOST}:${PROXY_PORT}],
     with subdomains [${Object.values(SUB_DOMAINS)}]`)
 );
