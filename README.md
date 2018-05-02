@@ -1,12 +1,23 @@
 # Lerna experiment
 
- For extended commands via Makefile see `CONTRIBUTING.md`.
+## The main idea
+
+The main idea is to have monorepo with all Eagle projects inside one repository
+
+This approach allows:
+
+* simplify dependencies management process
+* share common modules/components via project
+* simplify test process
 
 ## To start project:
 * `npm install --global lerna`
 * `npm install`
 * `npm run bootstrap --stream --hoist`
 * `npm run packagr --stream`
+
+**Note:** For extended commands via Makefile see `CONTRIBUTING.md`.
+
 
 ## Project structure
 
@@ -34,35 +45,49 @@
     |__ ...                        * finale AOT build of all the apps
 ```
 
+![](./lerna-monorepo.png)
+
 ## To serve app:
-* `lerna run start --stream --scope <app-name>`
+ 
+```
+lerna run start --stream --scope <app-name>
+```
 
 ## Build apps:
 
-* Build all apps: `lerna run build  --stream`
-* Build certain app: `lerna run build --stream --scope <app-name>`
+* Build all apps: 
+```
+lerna run build  --stream
+```
+* Build certain app: 
+```
+lerna run build --stream --scope <app-name>
+```
 
 ## Publish apps:
 
-* Publish all apps: `lerna publish`
-* Publish certain app: `lerna publish --stream --scope <app-name>`
+* Publish all apps: 
+```
+lerna publish
+```
+* Publish certain app:
+```
+lerna publish --stream --scope <app-name>
+```
 
 ## Lerna add module
 
-* `lerna add <package>[@version] [--dev]`  
-Example: `lerna add module-1 --scope=module-2 # Install module-1 to module-2`
+```
+lerna add <package>[@version] [--dev]
+```
+Example: 
+```
+lerna add module-1 --scope=module-2 # Install module-1 to module-2
+```
 
 ## Lerna clean all node_modules
 
-* `lerna clean`
+```
+lerna clean
+```
 
-## TODO: Discuss next questions:
-
-* where we will store our packages? artifactory?
-* do we have configuration for users permission on backend side? 
-* do we need endpoint for list of applications available for user? Who can add this?
-
-## TODO: Need to fix
-
-* fix build with aot flag
-* check rollup https://github.com/rollup/rollup
