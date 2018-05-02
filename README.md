@@ -25,11 +25,11 @@ This approach allows:
 |__ node_modules                  * hoisted common npm modules
 |__ packages                      * lerna packages
     |__ eagle-app-reports         * lerna scope (A)
-    |     |__node_modules         * link to common npm modles
+    |     |__node_modules         * link to common npm modules
     |__ eagle-app-insights        * lerna scope (B)
-    |     |__node_modules         * link to common npm modles
+    |     |__node_modules         * link to common npm modules
     |__ eagle-app-splash-page     * lerna scope (C)
-    |     |__node_modules         * link to common npm modles
+    |     |__node_modules         * link to common npm modules
     |__ ...
     |__ eagle-lib-components      * lerna scope (D). Shared Angular modules 
     |     |__ module-1            * Ng module
@@ -37,7 +37,7 @@ This approach allows:
     |     |__ ...
     | 
     |__ eagle-lib-scripts          * lerna scope (E). Shared-libs not angular libs       
-    |     |__ shared-sript-modules * not angular modules
+    |     |__ shared-script-modules * not angular modules
     |     |__ shared-script        * not angular libs
     |     |__ shared-js-lib
     |

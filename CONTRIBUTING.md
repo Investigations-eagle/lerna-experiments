@@ -1,4 +1,4 @@
-## About Monorepo approuche
+## About Monorepo approach
 
 Please read [Why is Babel a monorepo?](https://github.com/babel/babel/blob/master/doc/design/monorepo.md)
 
@@ -17,8 +17,7 @@ Make sure that `@angular/cli` is globally installed with version = `1.7.4`.
 ```bash
  $ git clone https://github.com/Investigations-eagle/lerna-experiments.git
  $ cd lerna-experiments
- $ git checkout clean-development-flow
- # to inatall all the repo (common and packages) npm dependencies
+ # to install all the repo (common and packages) npm dependencies
  $ make bootstrap-repo
 ```
 
@@ -68,7 +67,7 @@ Run app/lib in a watch mode run:
 Rebuild packages in live mode run:
 
 ```bash
- # spacific pack by name
+ # specific pack by name
  $ make packagr app=eagle-lib-components
 
  # rebuild all packaged app
