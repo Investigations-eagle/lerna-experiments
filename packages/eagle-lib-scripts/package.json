@@ -4,7 +4,6 @@
   "description": "",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "private": true,
   "scripts": {
     "compile": "tsc",
     "compile:watch": "tsc -w",

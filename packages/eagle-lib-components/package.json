@@ -7,7 +7,6 @@
   "es2015": "./dist/esm2015/eagle-lib-components.js",
   "typings": "./dist/eagle-lib-components.d.ts",
   "metadata": "./dist/eagle-lib-components.metadata.json",
-  "private": true,
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -20,7 +19,8 @@
     "clean:dist": "rimraf dist",
     "packagr": "ng-packagr -p ./src/app/lib/package.json",
     "ci": "npm run clean:dist && npm run packagr && npm run copy:assets",
-    "publish": "npm publish dist"
+    "prepublishOnly": "npm run ci",
+    "publish": "cd dist && npm publish"
   },
   "author": "",
   "license": "ISC",
