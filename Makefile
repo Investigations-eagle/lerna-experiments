@@ -79,5 +79,5 @@ server-static-compose-up: build-all server-static-up
 build-lib-fix:
 	./node_modules/.bin/lerna run packagr --scope $(LIB_COMPONENTS);\
 	./node_modules/.bin/lerna run build --stream --scope $(APP_SPLASH_PAGE);\
-	make static-server;
+	make static-server-up;
 
